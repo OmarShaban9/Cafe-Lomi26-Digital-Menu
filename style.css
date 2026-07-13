@@ -1,0 +1,342 @@
+/* --- GLOBALE STRUKTUR --- */
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+/* --- HERO-BEREICH GANZ OBEN --- */
+.welcome-container {
+    background-color: #0a0a0a;
+    text-align: center;
+    padding: 30px 20px;
+    border-bottom: 3px solid #d4af37;
+}
+
+/* KORREKTUR: Richtet die Zeile perfekt aus, damit Text und Logo nahtlos verschmelzen */
+.welcome-heading {
+    font-size: 34px;
+    color: #fff;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0; /* Verhindert Lücken innerhalb des Wortes */
+}
+
+/* LOGO ALS BUCHSTABE 'O': Perfekt rund, sauber zentriert und hell */
+.logo-as-o {
+    width: 86px;           /* Exakt an die Höhe der Großbuchstaben angepasst */
+    height: 86px;
+    aspect-ratio: 1 / 1;   /* Zwingt das Bild in eine perfekte Quadratform */
+    object-fit: contain;   /* Sorgt dafür, dass dein ganzes Logo im Kreis sichtbar bleibt */
+    border-radius: 50%;    /* Schneidet die Ecken ab für einen sauberen Kreis */
+    border: 1px solid #d4af37; /* Ein feiner Goldrand, damit es sich edel einfügt */
+    margin: 0 2px;         /* Kleiner Abstand links und rechts zu 'Willk' und 'mmen' */
+    display: inline-block;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #d4af37;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+/* --- MONA LISA BANNER --- */
+.mona-lisa-wrapper {
+    width: 100%;
+    max-width: 660px;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+    border: 1px solid #222;
+}
+
+.mona-lisa-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- NAVIGATION --- */
+.nav-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.nav-btn {
+    text-decoration: none;
+    color: #fff;
+    background-color: #1f1f1f;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+    text-align: center;
+    line-height: 1.3;
+}
+
+.nav-btn:hover {
+    background-color: #d4af37;
+    color: #111;
+    border-color: #d4af37;
+    transform: translateY(-2px);
+}
+
+/* --- SPEISEKARTEN CONTAINER --- */
+.menu-container {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+.category-section {
+    padding-top: 30px;
+}
+
+h2 {
+    color: #d4af37;
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #262626;
+    padding-bottom: 8px;
+    text-transform: uppercase;
+}
+
+h2 span {
+    font-size: 16px;
+    color: #777;
+    font-style: italic;
+    text-transform: none;
+    font-weight: normal;
+}
+
+.drink-sub-title {
+    color: #d4af37;
+    font-size: 18px;
+    margin: 35px 0 15px 0;
+    border-left: 3px solid #d4af37;
+    padding-left: 10px;
+}
+
+.drink-sub-title span {
+    font-size: 14px;
+    color: #777;
+    font-style: italic;
+}
+
+.menu-banner {
+    width: 100%;
+    margin: 10px 0 25px 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.5);
+    border: 1px solid #222;
+}
+
+.menu-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- CLEAN DESIGN BOXEN (OHNE PRODUKT-BILDER) --- */
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #1a1a1a;
+    border: 1px solid #242424;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.item-text {
+    flex: 1;
+}
+
+.item-text h3 {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.item-text h3 span {
+    font-size: 14px;
+    color: #777;
+    font-weight: normal;
+}
+
+.item-text p {
+    color: #b0b0b0;
+    font-size: 14px;
+    line-height: 1.5;
+    white-space: pre-line;
+}
+
+.price {
+    color: #d4af37;
+    font-weight: bold;
+    font-size: 18px;
+    white-space: nowrap;
+    padding-left: 15px;
+    margin-top: 1px;
+}
+
+/* --- VARIANTEN LISTEN UNTEREINANDER --- */
+.price-list {
+    list-style: none;
+    margin-top: 10px;
+    padding-left: 0;
+}
+
+.price-list li {
+    font-size: 14.5px;
+    color: #d8d8d8;
+    padding: 5px 0;
+    border-bottom: 1px dashed #2d2d2d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price-list li:last-child {
+    border-bottom: none;
+}
+
+.list-price {
+    color: #d4af37;
+    font-weight: bold;
+}
+
+.sub-list {
+    list-style: none;
+    margin-top: 8px;
+    padding-left: 2px;
+}
+
+.sub-list li {
+    font-size: 14.5px;
+    color: #e0e0e0;
+    margin-bottom: 5px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-item.variant-item {
+    align-items: stretch;
+}
+
+/* --- ANGEBOTE & COMBOS --- */
+.special-offer {
+    background-color: rgba(212, 175, 55, 0.04);
+    border: 1px dashed #d4af37;
+    padding: 12px;
+    border-radius: 6px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.special-offer h3 {
+    color: #d4af37;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.special-offer p {
+    font-size: 14px;
+}
+
+.extra-note {
+    background-color: #0d0d0d;
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+    margin: 15px 0;
+    font-size: 13.5px;
+    border: 1px solid #222;
+}
+
+/* --- NACH OBEN BUTTON --- */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #d4af37;
+    color: #111;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.5);
+    z-index: 100;
+}
+
+/* --- FOOTER --- */
+.thank-you-footer {
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 50px;
+    background-color: #0a0a0a;
+    border-top: 2px solid #d4af37;
+}
+
+.thank-you-footer h2 {
+    font-size: 22px;
+    color: #d4af37;
+    border: none;
+    margin-bottom: 6px;
+}
+
+
+.thank-you-footer p {
+    font-size: 13.5px;
+    color: #999;
+}
+.offer-img {
+    width: 100%;           /* Das Bild füllt die Breite der Box */
+    max-height: 100px;     /* Begrenzt die Höhe, damit es nicht zu groß wird */
+    object-fit: cover;     /* Schneidet das Bild passend zu */
+    border-radius: 4px;
+    margin-bottom: 10px;   /* Abstand zum Text */
+    display: block;
+}
+/* Stil für die neuen Produktbilder */
+.menu-thumbnail {
+    width: 120px;           /* Feste Breite */
+    height: 120px;          /* Feste Höhe */
+    object-fit: cover;     /* Schneidet das Bild quadratisch zu */
+    border-radius: 6px;    /* Abgerundete Ecken */
+    margin-right: 15px;    /* Abstand zum Text */
+    flex-shrink: 0;        /* Verhindert Stauchung */
+    border: 1px solid #333;
+}
+
+/* Sicherstellen, dass das Flexbox-Layout passt */
+.menu-item {
+    display: flex;
+    align-items: center;   /* Zentriert Bild und Text vertikal */
+}
